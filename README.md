@@ -5,10 +5,3 @@
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=4000&color=F75C7E&center=true&vCenter=true&width=500&lines=We're+Computer+Science+Students..;Welcome+to+About+us+Profile!" alt="Typing SVG" />
 </div>
-
-<div align="center">
-<img src="https://static.wikia.nocookie.net/zenless-zone-zero/images/b/bb/Bangboo_Net_Loading.gif/revision/latest?cb=20220520004736">
-
-
-<div align="center">
-<img src="https://media.tenor.com/NjEidW6uEjsAAAAM/the-shiggy-wiggy-shiggy.gif">
