@@ -8,3 +8,7 @@
 
 <div align="center">
 <img src="https://static.wikia.nocookie.net/zenless-zone-zero/images/b/bb/Bangboo_Net_Loading.gif/revision/latest?cb=20220520004736">
+
+
+<div align="center">
+<img src="https://media.tenor.com/NjEidW6uEjsAAAAM/the-shiggy-wiggy-shiggy.gif">
