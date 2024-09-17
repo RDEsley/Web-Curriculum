@@ -1,11 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Wiki de Currículos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Conexão com o CSS externo -->
 </head>
 <body>
-    
+    <!-- Menu de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Wiki de Currículos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-us">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#curriculo-um">Currículo Um</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#curriculo-dois">Currículo Dois</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Home -->
+    <section id="home" class="content">
+        <h2>Boas Práticas de Programação</h2>
+        <p>Adotar boas práticas de programação é essencial para garantir código limpo, eficiente e fácil de manter. Princípios como DRY (Don't Repeat Yourself) e KISS (Keep It Simple, Stupid) são fundamentais para a qualidade do código.</p>
+        <p><strong>Curiosidades sobre Tecnologia:</strong></p>
+        <ul>
+            <li>A primeira linguagem de programação foi criada por Ada Lovelace no século XIX.</li>
+            <li>O primeiro computador eletrônico, ENIAC, pesava mais de 27 toneladas.</li>
+            <li>O bug mais antigo da história foi causado por uma mariposa presa em um computador em 1947.</li>
+        </ul>
+        <img src="tech-image1.jpg" alt="Imagem de Tecnologia" class="tech-image">
+    </section>
+
+    <!-- Seção About Us -->
+    <section id="about-us" class="content">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma equipe dedicada a compartilhar currículos e boas práticas de programação. Nosso objetivo é ajudar desenvolvedores a aprender e crescer na carreira com base em exemplos práticos e dicas.</p>
+        <img src="tech-image2.jpg" alt="Equipe de Desenvolvimento" class="tech-image">
+    </section>
+
+    <!-- Seção Currículo Um -->
+    <section id="curriculo-um" class="content">
+        <h2>Currículo Um</h2>
+        <p>Este é o primeiro currículo, destacando habilidades em programação, desenvolvimento web e projetos realizados em equipe.</p>
+        <img src="curriculo1.jpg" alt="Currículo Um" class="tech-image">
+    </section>
+
+    <!-- Seção Currículo Dois -->
+    <section id="curriculo-dois" class="content">
+        <h2>Currículo Dois</h2>
+        <p>Este é o segundo currículo, focando em experiência com inteligência artificial, ciência de dados e desenvolvimento back-end.</p>
+        <img src="curriculo2.jpg" alt="Currículo Dois" class="tech-image">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Wiki de Currículos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Conexão com o JavaScript externo -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
