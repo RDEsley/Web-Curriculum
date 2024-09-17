@@ -3,5 +3,6 @@
 </div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=4000&color=F75C7E&center=true&vCenter=true&width=500&lines=We're+Computer+Science+Students..;Welcome+to+About+us+Profile!" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=4000&color=F75C7E&center=true&vCenter=true&width=500&lines=We're+Computer+Science+Students;Welcome+to+About+us+Profile!" alt="Typing SVG" />
 </div>
+<br>
