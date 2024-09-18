@@ -7,3 +7,5 @@
 </div>
 
 <div align="center"><h2>A website designed to efficiently showcase the resumes of two programmers, featuring sections dedicated to programming topics, interests, and intriguing facts about technology.</h2></div>
+
+[Site](index.html)
