@@ -3,6 +3,7 @@ from app.models import Curriculo, db
 
 app = Flask(__name__)
 
+
 @app.route('/api/curriculos', methods=['GET', 'POST'])
 def curriculos():
     if request.method == 'GET':
@@ -14,6 +15,7 @@ def curriculos():
         db.session.add(novo_curriculo)
         db.session.commit()
         return jsonify(novo_curriculo.serialize()), 201
+
 
 @app.route('/api/curriculos/<int:id>', methods=['GET', 'PUT', 'DELETE'])
 def curriculo(id):
