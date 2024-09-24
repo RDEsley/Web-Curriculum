@@ -1,0 +1,24 @@
+src/
+ └── app/
+     ├── components/
+     │   ├── home/
+     │   │   ├── home.component.html        # Template da Home Page
+     │   │   ├── home.component.ts          # Lógica da Home Page
+     │   │   ├── home.component.css         # Estilos da Home Page
+     │   ├── curriculo/
+     │   │   ├── curriculo.component.html   # Listagem de currículos
+     │   │   ├── curriculo.component.ts     # Lógica de exibição de currículos
+     │   │   ├── curriculo.component.css    # Estilos da listagem de currículos
+     │   ├── curriculo-form/
+     │   │   ├── curriculo-form.component.html  # Formulário para adicionar/editar currículos
+     │   │   ├── curriculo-form.component.ts    # Lógica do formulário de currículos
+     │   │   ├── curriculo-form.component.css   # Estilos do formulário de currículos
+     ├── services/
+     │   ├── curriculo.service.ts            # Serviço para fazer chamadas HTTP (CRUD de currículos)
+     │   ├── auth.service.ts                 # Serviço para login e autenticação
+     ├── guards/
+     │   ├── auth.guard.ts                   # Proteção de rotas (só acessíveis por administradores)
+     ├── app.component.html                  # Template do componente principal
+     ├── app.component.ts                    # Lógica do componente principal
+     ├── app.module.ts                       # Módulo principal da aplicação
+     ├── app-routing.module.ts               # Configuração de rotas do Angular

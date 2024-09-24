@@ -1,0 +1,9 @@
+<h2>Lista de Currículos</h2>
+<ul>
+  <li *ngFor="let curriculo of curriculos">
+    {{ curriculo.nome }}
+    <button (click)="editarCurriculo(curriculo.id)">Editar</button>
+    <button (click)="deletarCurriculo(curriculo.id)">Excluir</button>
+  </li>
+</ul>
+<button routerLink="/curriculo/adicionar">Adicionar Currículo</button>
