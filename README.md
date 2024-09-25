@@ -7,5 +7,3 @@
 </div>
 
 <div align="center"><h2>A website designed to efficiently showcase the curriculum, featuring sections dedicated to programming topics, interests, and intriguing facts about the person.</h2></div>
-
-[Site](index.html)
