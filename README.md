@@ -29,7 +29,7 @@ Este é um site que permite visualizar currículos cadastrados. Administradores 
 
 ## 📸 Demonstração
 
-curriculum-viewer.vercel.app
+- (curriculum-viewer.vercel.app)
 
 ## 🤝 Contribuindo
 
