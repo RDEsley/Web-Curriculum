@@ -253,6 +253,6 @@
     text-align: center;
     padding: 10px 0;
     background: var(--primary-color);
-    color: var(--text-light);
+    color: var(--border-color);
     font-size: 20px;
   }
