@@ -6,11 +6,14 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=4000&color=F75C7E&center=true&vCenter=true&width=500&lines=We're+Computer+Science+Students;Welcome+to+Curriculum+Showcase!" alt="Typing SVG" />
 </div>
 
-<div align="center"><h2>A website designed to efficiently showcase curriculums, featuring sections dedicated to programming topics, interests, and intriguing facts about the person.</h2></div>
+<div align="center">A website designed to efficiently showcase curriculums, featuring sections dedicated to programming topics, interests, and intriguing facts about the person.</div>
+
 
 # 📄 Visualizador de Currículos
 
+
 Este é um site que permite visualizar currículos cadastrados. Administradores têm acesso a uma página de login para gerenciar os currículos, podendo adicionar, remover ou editar informações.
+
 
 ## 🚀 Funcionalidades
 
@@ -20,6 +23,7 @@ Este é um site que permite visualizar currículos cadastrados. Administradores 
   - Editar informações dos currículos existentes.
   - Remover currículos do sistema.
 
+
 ## 🛠️ Tecnologias Utilizadas
 
 - **Frontend**: HTML, CSS, JavaScript
@@ -27,9 +31,11 @@ Este é um site que permite visualizar currículos cadastrados. Administradores 
 - **Banco de Dados**: SQLite/MySQL/PostgreSQL
 - **Controle de Acesso**: Autenticação para administradores.
 
+
 ## 📸 Demonstração
 
 - (curriculum-viewer.vercel.app)
+
 
 ## 🤝 Contribuindo
 
