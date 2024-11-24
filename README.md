@@ -6,7 +6,7 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=4000&color=F75C7E&center=true&vCenter=true&width=500&lines=We're+Computer+Science+Students;Welcome+to+Curriculum+Showcase!" alt="Typing SVG" />
 </div>
 
-<div align="center"><h2>A website designed to efficiently showcase the curriculum, featuring sections dedicated to programming topics, interests, and intriguing facts about the person.</h2></div>
+<div align="center"><h2>A website designed to efficiently showcase curriculums, featuring sections dedicated to programming topics, interests, and intriguing facts about the person.</h2></div>
 
 # 📄 Visualizador de Currículos
 
