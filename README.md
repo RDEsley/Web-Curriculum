@@ -3,11 +3,8 @@
 </div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=4000&color=F75C7E&center=true&vCenter=true&width=500&lines=We're+Computer+Science+Students;Welcome+to+Curriculum+Showcase!" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=4000&color=F75C7E&center=true&vCenter=true&width=500&lines=We're+Computer+Science+Students;Welcome+to+our+Project!" alt="Typing SVG" />
 </div>
-
-<div align="center">A website designed to efficiently showcase curriculums, featuring sections dedicated to programming topics, interests, and intriguing facts about the person.</div>
-
 
 # 📄 Visualizador de Currículos
 
@@ -34,8 +31,7 @@ Este é um site que permite visualizar currículos cadastrados. Administradores 
 
 ## 📸 Demonstração
 
-- (curriculum-viewer.vercel.app)
-
+Digite no seu navegador: curriculum-viewer.vercel.app
 
 ## 🤝 Contribuindo
 
