@@ -1,71 +1,69 @@
-from flask import Flask, request, jsonify
-from flask_cors import CORS
-from sqlalchemy import create_engine, Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from flask import Flask, render_template, redirect, url_for, request, flash, session
+from flask_sqlalchemy import SQLAlchemy
+from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
-CORS(app)  # Permitir requisições do frontend
-Base = declarative_base()
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///dados.db'
+app.config['SECRET_KEY'] = 'seu_segredo_aqui'
+db = SQLAlchemy(app)
 
-# Configuração do banco de dados
-DATABASE_URL = "sqlite:///certificados.db"
-engine = create_engine(DATABASE_URL)
-Session = sessionmaker(bind=engine)
-session = Session()
+# Modelo de Usuário
+class Usuario(db.Model):
+    __tablename__ = 'usuarios'
+    id = db.Column(db.Integer, primary_key=True)
+    nome = db.Column(db.String(40), nullable=False, unique=True)
+    senha = db.Column(db.String(128), nullable=False)
 
-# Modelo para certificados
-class Certificado(Base):
-    __tablename__ = "certificados"
-    id = Column(Integer, primary_key=True)
-    nome = Column(String, nullable=False)
-    instituicao = Column(String, nullable=False)
-    ano = Column(Integer, nullable=False)
-    url = Column(String)
+@app.route('/')
+def home():
+    if 'usuario' in session:
+        return render_template('home.html', usuario=session['usuario'])
+    return redirect(url_for('login'))
 
-Base.metadata.create_all(engine)
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        nome = request.form['nome']
+        senha = request.form['senha']
+        usuario = Usuario.query.filter_by(nome=nome).first()
 
-# Rotas
-@app.route('/api/certificados', methods=['GET'])
-def get_certificados():
-    certificados = session.query(Certificado).all()
-    return jsonify([{
-        "id": c.id, "nome": c.nome, "instituicao": c.instituicao,
-        "ano": c.ano, "url": c.url
-    } for c in certificados])
+        if usuario and check_password_hash(usuario.senha, senha):
+            session['usuario'] = usuario.nome
+            flash('Login realizado com sucesso!', 'success')
+            return redirect(url_for('home'))
+        else:
+            flash('Nome ou senha incorretos.', 'danger')
 
-@app.route('/api/certificados', methods=['POST'])
-def add_certificado():
-    data = request.json
-    novo_certificado = Certificado(
-        nome=data['nome'], instituicao=data['instituicao'], 
-        ano=data['ano'], url=data.get('url')
-    )
-    session.add(novo_certificado)
-    session.commit()
-    return jsonify({"message": "Certificado adicionado com sucesso!"}), 201
+    return render_template('login.html')
 
-@app.route('/api/certificados/<int:id>', methods=['PUT'])
-def update_certificado(id):
-    data = request.json
-    certificado = session.query(Certificado).get(id)
-    if not certificado:
-        return jsonify({"error": "Certificado não encontrado"}), 404
-    certificado.nome = data['nome']
-    certificado.instituicao = data['instituicao']
-    certificado.ano = data['ano']
-    certificado.url = data.get('url')
-    session.commit()
-    return jsonify({"message": "Certificado atualizado com sucesso!"})
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        nome = request.form['nome']
+        senha = request.form['senha']
+        confirmacao = request.form['confirmacao']
 
-@app.route('/api/certificados/<int:id>', methods=['DELETE'])
-def delete_certificado(id):
-    certificado = session.query(Certificado).get(id)
-    if not certificado:
-        return jsonify({"error": "Certificado não encontrado"}), 404
-    session.delete(certificado)
-    session.commit()
-    return jsonify({"message": "Certificado excluído com sucesso!"})
+        if senha != confirmacao:
+            flash('As senhas não coincidem!', 'danger')
+        elif Usuario.query.filter_by(nome=nome).first():
+            flash('Nome de usuário já existe.', 'danger')
+        else:
+            hash_senha = generate_password_hash(senha)
+            novo_usuario = Usuario(nome=nome, senha=hash_senha)
+            db.session.add(novo_usuario)
+            db.session.commit()
+            flash('Cadastro realizado com sucesso!', 'success')
+            return redirect(url_for('login'))
+
+    return render_template('register.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('usuario', None)
+    flash('Você saiu da sua conta.', 'info')
+    return redirect(url_for('login'))
 
 if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
     app.run(debug=True)
