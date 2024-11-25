@@ -75,7 +75,8 @@ body {
 .custom-header {
   position: relative;
   height: 300px;
-  background: url('src/assets/images/header-bg.jpg') no-repeat center center / cover;
+  background: url("src/assets/images/header-bg.jpg") no-repeat center center /
+    cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,7 +108,7 @@ body {
 
 .custom-header button {
   padding: 10px 20px;
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -131,7 +132,6 @@ body {
     padding: 8px 16px;
   }
 }
-
 
 header {
   text-align: center;
@@ -308,6 +308,62 @@ main {
   text-decoration: underline;
 }
 
+/* Botão de login - estilo aprimorado */
+#enter {
+  background-color: var(--primary-color, #3f51b5); 
+  color: var(--text-light, #fff); 
+  font-family: "Roboto", Arial, sans-serif; 
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px; 
+  cursor: pointer;
+  box-shadow: 0 4px 10px var(--shadow-color, rgba(0, 0, 0, 0.2)); 
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de hover para o botão */
+#enter:hover {
+  background-color: var(
+    --primary-hover-color,
+    #3467d4
+  ); 
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 15px var(--shadow-color, rgba(0, 0, 0, 0.3)); 
+}
+
+/* Efeito de foco */
+#enter:focus {
+  outline: none;
+  box-shadow: 0 0 10px 3px var(--primary-color, #3f51b5); 
+}
+
+/* Efeito de ripple (onda ao clicar) */
+#enter::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.5); /* Efeito de onda */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+  opacity: 0;
+}
+
+#enter:active::after {
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+  transition: none; /* Remove transição para o clique */
+}
+
 footer {
   bottom: 0;
   left: 0;
@@ -318,12 +374,4 @@ footer {
   background: var(--primary-color);
   color: var(--border-color);
   font-size: 20px;
-}
-
-#enter {
-  margin-left: 90%;
-  padding: 5px;
-  color: #ffffff;
-  background-color: #2d166b;
-  border-radius: 5px;
 }
