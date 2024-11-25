@@ -1,0 +1,9 @@
+src/
+├── assets/
+│   └── images/
+├── scripts/
+│   └── script.js
+├── styles/
+│   └── style.css
+│
+index.html
