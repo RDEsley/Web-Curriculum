@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <form method="POST">
+        <label>Nome:</label><br>
+        <input type="text" name="nome" required><br>
+        <label>Senha:</label><br>
+        <input type="password" name="senha" required><br>
+        <label>Confirme a Senha:</label><br>
+        <input type="password" name="confirmacao" required><br>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <p><a href="{{ url_for('login') }}">Já tem uma conta? Faça login</a></p>
+</body>
+</html>
