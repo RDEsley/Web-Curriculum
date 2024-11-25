@@ -315,6 +315,7 @@ main {
   font-family: "Roboto", Arial, sans-serif; 
   font-size: 16px;
   font-weight: bold;
+  position: right;
   text-transform: uppercase;
   padding: 12px 20px;
   border: none;
@@ -344,10 +345,9 @@ main {
 
 /* Efeito de ripple (onda ao clicar) */
 #enter::after {
-  content: "";
+  content: "right";
   position: absolute;
   top: 50%;
-  left: 50%;
   width: 0;
   height: 0;
   background: rgba(255, 255, 255, 0.5);
