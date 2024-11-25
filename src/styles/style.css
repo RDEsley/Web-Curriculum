@@ -256,3 +256,11 @@
     color: var(--border-color);
     font-size: 20px;
   }
+
+  #enter {
+    margin-left: 90%;
+    padding: 5px;
+    color: #ffffff;
+    background-color: #2d166b;
+    border-radius: 5px;
+  }
