@@ -315,7 +315,6 @@ main {
   font-family: "Roboto", Arial, sans-serif; 
   font-size: 16px;
   font-weight: bold;
-  position: right;
   text-transform: uppercase;
   padding: 12px 20px;
   border: none;
@@ -323,16 +322,16 @@ main {
   cursor: pointer;
   box-shadow: 0 4px 10px var(--shadow-color, rgba(0, 0, 0, 0.2)); 
   transition: all 0.3s ease-in-out;
-  position: relative;
+  position: absolute; /* Torna o botão posicionado de forma fixa */
+  top: 20px; /* Distância do topo */
+  right: 20px; /* Distância da direita */
   overflow: hidden;
+  z-index: 1000; /* Garante que o botão fique acima de outros elementos */
 }
 
 /* Efeito de hover para o botão */
 #enter:hover {
-  background-color: var(
-    --primary-hover-color,
-    #3467d4
-  ); 
+  background-color: var(--primary-hover-color, #3467d4); 
   transform: translateY(-2px); 
   box-shadow: 0 6px 15px var(--shadow-color, rgba(0, 0, 0, 0.3)); 
 }
@@ -345,9 +344,10 @@ main {
 
 /* Efeito de ripple (onda ao clicar) */
 #enter::after {
-  content: "right";
+  content: ''; /* Remove o texto desnecessário */
   position: absolute;
   top: 50%;
+  left: 50%;
   width: 0;
   height: 0;
   background: rgba(255, 255, 255, 0.5);
@@ -363,6 +363,7 @@ main {
   opacity: 0;
   transition: none; /* Remove transição para o clique */
 }
+
 
 footer {
   bottom: 0;
