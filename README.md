@@ -58,4 +58,4 @@ Este projeto está sob a licença [MIT](LICENSE).
 
 ---
 
-Feito com ❤️ por [Richard](https://github.com/RDEsley), [Fernanda](https://github.com/FeMeNiKi) e [Matheus](https://github.com/)
+Feito com ❤️ por [Richard Esley](https://github.com/RDEsley), [Fernanda Kikuchi](https://github.com/FeMeNiKi) e [Matheus Brandão](https://github.com/)
