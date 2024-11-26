@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Viewer - Login</title>
-    <link rel="stylesheet" href="src/styles/admin.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="src/assets/images/favicon-curriculum-16x16.png">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/styles/login.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/assets/images/favicon-curriculum-16x16.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 </head>
 
-<body>
-    <h1>Login</h1>
-    <form method="POST">
-        <label>Nome:</label><br>
-        <input type="text" name="nome" required><br>
-        <label>Senha:</label><br>
-        <input type="password" name="senha" required><br>
-        <button type="submit">Entrar</button>
-    </form>
-    <p><a href="{{ url_for('registrar') }}">Cadastre-se</a></p>
 
+<body>
+    <main class="login-container">
+        <form id="login-form" method="POST" action="{{ url_for('login') }}">
+            <h1>Bem-vindo</h1>
+            <p>Faça login do Administrador para continuar</p>
+            <div class="input-container">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" name="nome" placeholder="Digite seu usuário" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="senha" placeholder="Digite sua senha" required>
+            </div>
+            <button type="submit">Entrar</button>
+            <a href="{{ url_for('index') }}" class="forgot-password">Voltar à página inicial?</a>
+        </form>
+    </main>
+    <script src="../static/scripts/script.js"></script>
 </body>
 
 </html>

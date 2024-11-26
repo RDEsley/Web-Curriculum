@@ -1,0 +1,378 @@
+/* Tema padrão (claro) */
+:root {
+  --primary-color: #3f51b5; /* Azul suave, cor principal */
+  --secondary-color: #f9f9fc; /* Fundo cinza muito claro */
+  --text-color: #4a4a4a; /* Cinza escuro, mais suave para leitura */
+  --text-light: #000000; /* Branco para texto claro */
+  --border-color: #d1d5db; /* Cinza suave para bordas */
+  --shadow-color: rgba(0, 0, 0, 0.05); /* Sombra leve */
+  --dark-mode-image: url(https://i.makeagif.com/media/2-21-2015/u4391z.gif); /*Imagem para mudança de tema*/
+}
+
+/* Tema escuro */
+.dark-theme {
+  --primary-color: #2d166b; /* Cinza-azulado escuro mais sofisticado */
+  --secondary-color: #212b36; /* Fundo preto acinzentado */
+  --text-color: #e0e0e0; /* Texto claro mais suave */
+  --text-light: #ffffff; /* Branco para texto claro */
+  --border-color: #e2e0e0; /* Branco para bordas */
+  --shadow-color: rgba(0, 0, 0, 0.25); /* Sombra mais intensa */
+}
+
+/* Botão de alternância */
+#theme-toggle {
+  margin-top: 10px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+#theme-toggle:hover {
+  background-image: var(--dark-mode-image);
+  color: var(--border-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#theme-toggle:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+#theme-toggle:focus {
+  outline: none;
+  border-color: var(--border-color);
+  box-shadow: 0 0 0 2px rgba(98, 0, 234, 0.5); /* Foco suave */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: var(--secondary-color);
+  color: var(--text-color);
+  padding: 0;
+  margin: 0;
+}
+
+/* Header personalizado */
+.custom-header {
+  position: relative;
+  height: 300px;
+  background: url("src/assets/images/header-bg.jpg") no-repeat center center /
+    cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.custom-header .overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Escurece a imagem */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.custom-header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 20px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.custom-header button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-header button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .custom-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .custom-header button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  padding-bottom: 40px;
+  scroll-padding-top: 40px;
+  background: var(--primary-color);
+  color: var(--border-color);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header .intro {
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  flex: 1;
+}
+
+#certificados {
+  margin-top: 20px;
+}
+
+#certificados h2 {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 15px;
+  font-size: 25px;
+}
+
+.certificados-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.certificados-list .certificado {
+  background: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  transition: transform 0.3s ease;
+}
+
+.certificado-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.certificado-link:hover {
+  text-decoration: none;
+  cursor: url(https://img.icons8.com/?size=48&id=2Eu0YKqKdk3B&format=png),
+    default;
+}
+
+.certificados-list .certificado:hover {
+  transform: scale(1.05);
+}
+
+.certificado h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+/* Estilo para a seção de Contato */
+#contato {
+  margin-top: 40px;
+  background: var(--secondary-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: slideUp 1s ease-in-out;
+}
+
+#contato h2 {
+  font-size: 2rem;
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Animação de movimento para o texto "Entre em contato" */
+@keyframes moveText {
+  0% {
+    transform: translateY(0) translateX(-100%);
+  }
+  25% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(0) translateX(100%);
+  }
+  75% {
+    transform: translateY(0) translateX(-0%);
+  }
+  100% {
+    transform: translateY(0) translateX(-100%);
+  }
+}
+
+#contato-title {
+  font-size: 2rem;
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 30px;
+  animation: bounce 10s infinite alternate;
+}
+
+/* Aplicando animação ao título */
+#contato h2 span {
+  display: inline-block;
+  animation: moveText 8s infinite;
+}
+
+/* Links de contato */
+#contato ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#contato ul li {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: var(--text-light);
+  position: relative;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Efeito de link */
+#contato a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+#contato a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+#contato a:hover::before {
+  width: 100%;
+}
+
+#contato a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* Botão de login - estilo aprimorado */
+#enter {
+  background-color: var(--primary-color, #3f51b5); 
+  color: var(--text-light, #fff); 
+  font-family: "Roboto", Arial, sans-serif; 
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px; 
+  cursor: pointer;
+  box-shadow: 0 4px 10px var(--shadow-color, rgba(0, 0, 0, 0.2)); 
+  transition: all 0.3s ease-in-out;
+  position: absolute; /* Torna o botão posicionado de forma fixa */
+  top: 20px; /* Distância do topo */
+  right: 20px; /* Distância da direita */
+  overflow: hidden;
+  z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+/* Efeito de hover para o botão */
+#enter:hover {
+  background-color: var(--primary-hover-color, #3467d4); 
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 15px var(--shadow-color, rgba(0, 0, 0, 0.3)); 
+}
+
+/* Efeito de foco */
+#enter:focus {
+  outline: none;
+  box-shadow: 0 0 10px 3px var(--primary-color, #3f51b5); 
+}
+
+/* Efeito de ripple (onda ao clicar) */
+#enter::after {
+  content: ''; /* Remove o texto desnecessário */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+  opacity: 0;
+}
+
+#enter:active::after {
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+  transition: none; /* Remove transição para o clique */
+}
+
+
+footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background: var(--primary-color);
+  color: var(--border-color);
+  font-size: 20px;
+}

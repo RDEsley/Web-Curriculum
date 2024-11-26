@@ -25,10 +25,15 @@ def user_loader(id):
     return Usuario.query.get(int(id))
 
 
-@app.route("/")
+@app.route("/home")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/admin")
 @login_required
-def home():
-    return render_template("home.html", usuario=current_user.nome)
+def admin():
+    return render_template("admin.html", usuario=current_user.nome)
 
 
 @app.route("/registrar", methods=["GET", "POST"])
@@ -49,7 +54,7 @@ def registrar():
         db.session.add(novo_usuario)
         db.session.commit()
         login_user(novo_usuario)
-        return redirect(url_for("home"))
+        return redirect(url_for("admin"))
 
     return render_template("register.html")
 
@@ -63,7 +68,7 @@ def login():
         usuario = Usuario.query.filter_by(nome=nome).first()
         if usuario and check_password_hash(usuario.senha, senha):
             login_user(usuario)
-            return redirect(url_for("home"))
+            return redirect(url_for("admin"))
         else:
             return "Credenciais inválidas. Tente novamente."
 

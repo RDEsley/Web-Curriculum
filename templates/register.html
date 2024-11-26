@@ -4,25 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="src/styles/login.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="src/assets/images/favicon-curriculum-16x16.png">
+    <title>Cadastro | Admin Panel</title>
+    <link rel="stylesheet" href="../static/styles/register.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/assets/images/favicon-curriculum-16x16.png">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
-    <h1>Cadastro</h1>
-    <form method="POST">
-        <label>Nome:</label><br>
-        <input type="text" name="nome" required><br>
-        <label>Senha:</label><br>
-        <input type="password" name="senha" required><br>
-        <label>Confirme a Senha:</label><br>
-        <input type="password" name="confirmacao" required><br>
-        <button type="submit">Cadastrar</button>
-    </form>
-    <p><a href="{{ url_for('login') }}">Já tem uma conta? Faça login</a></p>
+    <div class="container">
+        <h1>Crie um Novo Administrador</h1>
+        <form method="POST">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmacao">Confirmar Senha</label>
+                <input type="password" id="confirmacao" name="confirmacao" placeholder="Confirme sua senha" required>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p>Já é um Administrador? <a href="{{ url_for('login') }}">Faça login</a></p>
+        <p>Voltar para <a href="{{ url_for('admin') }}">Admin Panel</a></p>
+    </div>
 </body>
 
 </html>
