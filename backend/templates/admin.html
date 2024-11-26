@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Curriculum Viewer</title>
+    <link rel="stylesheet" href="../static/styles/admin.css">
+    <link rel="icon" href="../static/assets/images/favicon-curriculum-16x16.png" type="image/png" sizes="16x16">
+    <meta name="theme-color" content="#FF7F50">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="custom-header">
+        <div class="overlay">
+            <h1>Bem-vindo(a), {{usuario}}</h1>
+            <h2>Espaço do Administrador</h2>
+            <a href="{{ url_for('registrar') }}" class="nav-link">Cadastrar Novo Admin</a>
+            <a href="{{ url_for('index') }}" class="forgot-password">Voltar à Página Inicial</a>
+        </div>
+    </header>
+
+
+
+    <header>
+        <a href="{{ url_for('logout') }}"><button id="enter">Sair</button></a>
+        <h1>Currículos</h1>
+        <p class="intro">Jovens energéticos e apaixonados por tecnologia e programação.</p>
+    </header>
+
+    <main>
+        <!-- Seção de Currículos -->
+        <section id="curriculos">
+            <h2>Currículos</h2>
+            <div class="curriculos-list"></div>
+        </section>
+
+        <!-- Seção de Contatos -->
+        <section id="contato">
+            <h2><span>Contatos</span></h2>
+            <ul>
+                <li><strong>LinkedIn:</strong>
+                    <a href="https://linkedin.com/in/richardesley" target="_blank">linkedin.com/in/richardesley</a>
+                </li>
+                <li><strong>LinkedIn:</strong>
+                    <a href="https://linkedin.com/in/fernanda-kikuchi"
+                        target="_blank">linkedin.com/in/fernandakikuchi</a>
+                </li>
+                <li><strong>LinkedIn:</strong>
+                    <a href="https://linkedin.com/in/" target="_blank">linkedin.com/in/matheusbrandao</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Desenvolvido por Richard E., Fernanda K. e Matheus B.</p>
+    </footer>
+    <script src="../static/scripts/admin.js"></script>
+</body>
+
+</html>
