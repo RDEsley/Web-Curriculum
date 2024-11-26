@@ -1,6 +1,6 @@
 // Lista de certificados e cursos
 const certificados = [
-    { nome: "Richard Oliveira", instituicao: "CEUB", ano: 2023, url: "CV.pdf" },
+    { nome: "Richard Oliveira", instituicao: "CEUB", ano: 2023, url: "backend/static/assets/pdfs/CV - Richard Oliveira.pdf" },
     { nome: "Fernanda Kikuchi", instituicao: "CEUB", ano: 2023, url: "CV.pdf" },
     { nome: "Matheus Brandão", instituicao: "CEUB", ano: 2023, url: "CV.pdf" },
   ];
