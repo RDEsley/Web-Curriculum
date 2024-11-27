@@ -1,7 +1,8 @@
 /* Corpo geral */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #3f51b5, #0056b3);
+    background-image: url("https://i.pinimg.com/originals/c8/4f/b7/c84fb740471d58ba9597ace28969d490.gif");
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +13,7 @@ body {
   
   /* Container de login */
   .login-container {
-    background-color: #292828;
+    background-color: #ffffffd3;
     padding: 40px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -25,13 +26,13 @@ body {
   h1 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #007BFF;
+    color: #003f83;
   }
   
   p {
     font-size: 14px;
     margin-bottom: 30px;
-    color: #eeeeee;
+    color: #000000;
   }
   
   /* Campos de entrada */
@@ -45,7 +46,7 @@ body {
     font-size: 14px;
     display: block;
     margin-bottom: 5px;
-    color: #b3adad;
+    color: #525252;
   }
   
   input {
@@ -58,14 +59,14 @@ body {
   }
   
   input:focus {
-    border-color: #007BFF;
+    border-color: #00356e;
     outline: none;
   }
   
   /* Botão de login */
   button {
     width: 100%;
-    background-color: #007BFF;
+    background-color: #003a77;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -85,7 +86,7 @@ body {
     display: block;
     margin-top: 15px;
     font-size: 14px;
-    color: #73b6fd;
+    color: #241383;
     text-decoration: none;
     transition: color 0.3s ease;
   }

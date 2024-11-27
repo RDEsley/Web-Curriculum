@@ -86,7 +86,7 @@ body {
 }
 
 .custom-header .overlay {
-  background-color: rgba(0, 0, 0, 0.6); /* Escurece a imagem */
+  background-image: url("https://t4.ftcdn.net/jpg/02/76/08/07/360_F_276080724_hltnCyDjcqAyRtLzDYo3T2jXbBtCD7fl.jpg");
   position: absolute;
   top: 0;
   left: 0;
@@ -99,6 +99,10 @@ body {
   padding: 20px;
 }
 
+a {
+  color: #d1d1e2;
+}
+
 .custom-header h1 {
   font-size: 2.5rem;
   margin: 0 0 20px 0;
@@ -108,7 +112,7 @@ body {
 
 .custom-header button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #e43434;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -118,7 +122,7 @@ body {
 }
 
 .custom-header button:hover {
-  background-color: #0056b3;
+  background-color: #c71212;
 }
 
 /* Responsividade */

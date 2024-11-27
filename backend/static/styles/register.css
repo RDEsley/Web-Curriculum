@@ -1,7 +1,10 @@
 /* styles/register.css */
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #f8fafc;
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/hd/cca1e136569841.5720ffd3c7679.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,7 +15,7 @@ body {
 }
 
 .container {
-  background-color: #ffffff;
+  background-color: #ffffffe0;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
