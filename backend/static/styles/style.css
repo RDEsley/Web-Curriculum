@@ -63,6 +63,8 @@
 }
 
 body {
+  min-height: 100vh;
+  margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background: var(--secondary-color);
@@ -230,25 +232,6 @@ main {
   white-space: nowrap;
 }
 
-/* Animação de movimento para o texto "Entre em contato" */
-@keyframes moveText {
-  0% {
-    transform: translateY(0) translateX(-100%);
-  }
-  25% {
-    transform: translateY(0) translateX(0);
-  }
-  50% {
-    transform: translateY(0) translateX(100%);
-  }
-  75% {
-    transform: translateY(0) translateX(-0%);
-  }
-  100% {
-    transform: translateY(0) translateX(-100%);
-  }
-}
-
 #contato-title {
   font-size: 2rem;
   color: var(--text-light);
@@ -375,4 +358,5 @@ footer {
   background: var(--primary-color);
   color: var(--border-color);
   font-size: 20px;
+  margin: auto;
 }
