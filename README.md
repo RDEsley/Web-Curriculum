@@ -23,15 +23,16 @@ Este é um site que permite visualizar currículos cadastrados. Administradores 
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Python (Flask/Django)
-- **Banco de Dados**: SQLite/MySQL/PostgreSQL
+- **Frontend**: HTML, CSS, JavaScript, React
+- **Backend**: Python (Flask)
+- **Banco de Dados**: SQLite/MySQL
 - **Controle de Acesso**: Autenticação para administradores.
 
 
-## 📸 Demonstração
+## 📸 Demonstração (Apenas do CRUD)
 
 Digite no seu navegador: curriculum-viewer.vercel.app
+OBS: Caso tenha interesse em ver o projeto completo, faça um git clone e siga as istruções do Flask e rode o arquivo 'main.py'.
 
 ## 🤝 Contribuindo
 
