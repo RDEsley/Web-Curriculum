@@ -1,9 +1,40 @@
-src/
-├── assets/
-│   └── images/
-├── scripts/
-│   └── script.js
-├── styles/
-│   └── style.css
+📂 CURRICULUMVIEWER
+├── 📂 backend
+│   ├── 📂 static
+│   │   ├── 📂 assets      # Recursos (imagens, ícones, etc.)
+│   │   ├── 📂 scripts     # Arquivos JavaScript
+│   │   └── 📂 styles      # Arquivos CSS
+│   ├── 📂 templates        # Páginas HTML para o back-end
+│   │   ├── admin.html
+│   │   ├── index.html
+│   │   ├── login.html
+│   │   └── register.html
+│   ├── db.py               # Arquivo de conexão/configuração do banco de dados
+│   ├── main.py             # Arquivo principal para rodar o servidor
+│   ├── models.py           # Modelos de dados (ORM)
+│   ├── poetry.lock         # Dependências do Poetry
+│   ├── pyproject.toml      # Configuração do Poetry
+│   └── requirements.txt    # Dependências (caso use pip)
 │
-index.html
+├── 📂 docs
+│   ├── LICENSE             # Licença do projeto
+│   └── project_structure.md # Documentação sobre a estrutura
+│
+├── 📂 frontend
+│   ├── 📂 public
+│   │   └── vite.svg        # Arquivo estático público
+│   ├── 📂 src
+│   │   ├── 📂 components   # Componentes React
+│   │   │   └── ModalComp.jsx
+│   │   ├── App.jsx         # Componente principal do React
+│   │   └── main.jsx        # Ponto de entrada do React
+│   ├── package.json        # Configurações e dependências do front-end
+│   ├── package-lock.json   # Lock file do NPM
+│   ├── vite.config.js      # Configuração do Vite
+│   └── yarn.lock           # Lock file do Yarn
+│
+├── 📂 instance
+│   └── database.db         # Banco de dados SQLite
+│
+├── .gitignore              # Arquivo para ignorar diretórios/arquivos no Git
+└── index.html              # Página inicial (pode ser raiz do front ou referência)
